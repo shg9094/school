@@ -1,0 +1,9 @@
+SELECT * from TEST;
+CREATE TABLE Member(
+	id VARCHAR2(30) PRIMARY KEY,
+	name VARCHAR2(30) NOT NULL,
+	password VARCHAR2(30) NOT NULL,
+	addr VARCHAR2(100),
+	birth NUMBER
+	
+);
