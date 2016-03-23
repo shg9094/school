@@ -1,0 +1,28 @@
+@CHARSET "UTF-8";
+.mg_auto{margin : 0 auto} /* 가운데 정렬 */
+a:LINK {	color : #ff00ff}
+a:visited {	color : green;}
+a:hover {	color : hotpink;}
+a:active {	color : blue;}
+.list_cycle {list-style-type:cicle}
+.list_square {list-style-type:cicle}
+.list_upper {list-style-type:cicle}
+.list_lower {list-style-type:cicle}
+/*list-style-image:url('*.jpg');*/
+/*수직네비게이션*/
+ul {list-style-type:none;margin:0;padding:0;width:60px;}
+li a{diplay:block}
+li a: hover{background-color:#555;color:white;}
+li {background-color:#4CAF50;color: white;} 
+/*수평 네비게이션*/
+li {diplay:inline}
+/*양식*/
+input[type=text]{width: 100%;padding: 12px 20px; margin: 8px,0;}
+/*모서리*/
+border-radius:4px;
+/*포커스*/
+input[type=text] focus {background-color: lightblue}
+input[type=password] focus {background-color: lightblue}
+/*이미지 입력*/
+/*background-image:url('*.jpg');*/
+.w_100pct{width: 100%}
