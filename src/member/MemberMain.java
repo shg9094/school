@@ -10,8 +10,9 @@ public class MemberMain {
 			System.out.println("[메뉴]1회원가입2로그인3내정보보기4내정보수정5종료");
 			switch (s.nextInt()) {
 			case 1: 
-				System.out.println("아이디 비번 이름 생년월일 주소 입력");
-				service.join(new MemberBean(s.next(),s.next(),s.next(),s.next(),s.nextInt()));
+				System.out.println("아이디 비번 이름  주소 생년월일 입력");
+				System.out.println("Main 회원가입결과 :"+
+				service.join(new MemberBean(s.next(),s.next(),s.next(),s.next(),s.nextInt())));
 				break;
 			case 2: 
 				System.out.println("아이디와 비밀번호를 입력해주세요");

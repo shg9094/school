@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 
 @WebServlet("/global/main.do")
-public class homeController extends HttpServlet {
+public class HomeController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     
     
@@ -30,7 +30,7 @@ public class homeController extends HttpServlet {
 				request.getRequestDispatcher(command.getView());
 				dis.forward(request, response);
 	}
-
+	
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		

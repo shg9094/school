@@ -1,9 +1,10 @@
 package member;
 
 public interface MemberService {
-	public void join(MemberBean member);
-	public String login(String id, String password);
+	public	int join(MemberBean member);
+	public MemberBean login(String id, String password);
 	public MemberBean detail(String id);
-	public void update(MemberBean member);
-	public void remove(String id);
+	public int update(MemberBean member);
+	public int remove(String id);
+	public boolean isMember(String id);
 }

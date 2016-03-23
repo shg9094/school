@@ -1,10 +1,10 @@
-package grade.grade;
+package grade;
 
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.Scanner;
 
-public class GradeController {
+public class GradeMain {
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
 		GradeService service = new GradeServiceImpl();
@@ -32,7 +32,7 @@ public class GradeController {
 //					System.out.println(gmbs[i]);
 //				}
 				
-				for( GradeMemberBean gmb : service.getList() ) {
+				for( GradeBean gmb : service.getList() ) {
 					System.out.println(gmb);
 				}
 				break;
