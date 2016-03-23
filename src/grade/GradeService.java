@@ -1,4 +1,4 @@
-package grade.grade;
+package grade;
 
 import java.util.ArrayList;
 
@@ -16,7 +16,7 @@ public interface GradeService {
 	// c 성젃표 등록
 	public void input(GradeBean grade); //추상 메소드 기능 은 추상화 속성은 추상화x
 	// r 성적표 리스트 출력
-	public GradeMemberBean[] getList();
+	public ArrayList<GradeBean> getList();
 	
 	//r  성적표 조회 (학번)
 	public GradeMemberBean getGradeByHak(int hak);

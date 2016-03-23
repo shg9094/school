@@ -1,17 +1,17 @@
 package global;
 
-public class Command {//bean
-	private String directory,action,view;
-	public Command() {
-	
-	}
+public class Command {
+	private String directory,action;
+	private static String view;
+
+	public Command() {}
 	
 	public Command(String directory,String action) {
 		this.directory = directory;
 		this.action = action;
-		this.view = Constants.VIEWS+"/"+directory+"/"+action+".jsp";
+		this.view = Constants.VIEWS+directory+"/"+action+".jsp";
 	}
-
+	
 	public String getDirectory() {
 		return directory;
 	}
@@ -28,28 +28,25 @@ public class Command {//bean
 		this.action = action;
 	}
 
-	public String getView() {
+	public static String getView() {
 		return view;
 	}
 
 	public void setView(String view) {
 		this.view = view;
 	}
+	
 }
 /**
- * URL = http://localhost:9000/school/member/login_form.do
- * 컨텍스트패스 : http://localhost:9000/school
- * WebContent : /
- * URI(겟방식) : member/login_form.do?id=hong&passward=1
- * URI(포스트 방식) : member/login_form.do
- * 쿼리(질문)스트릴 구분자 : ?
- * 파라미터 구분자 : &
- * 쿼리스트링 : id=hong&passward=1
- * member >> folder = directory
- * login_form => action
- * do
- * id=hong
- * passward=1
- * URI는 프로젝트 내부에서 유일한 (ID)이어야하며,
- * 이 URI 를 분해해서 서블릿에게 명령을 내리는 구조로 이뤄짐
- */
+ URL => http://localhost:9000/school/member/login_form.do
+ 컨텍스트패스 : http://localhost:9000/school
+ WebContent : /
+ URI(겟방식) : member/login_form.do?id=hong&password=1 
+ URI(포스트방식) : member/login.do
+ 쿼리스트링 구분자 : ? 
+ 파라미터 구분자 : &
+ 쿼리스트링 : id=hong&password=1 
+ 
+ URI 는 프로젝트 내부에서 유일한 값(ID) 이어야 하며,
+ 이 URI 를 분해해서 서블릿에게 명령을 내리는 구조로 이뤄진다
+ * */

@@ -1,11 +1,8 @@
-package grade.grade;
+package grade;
 
 public class GradeMemberBean {
-
 	private int hak,java,sql,jsp,spring,birth;
 	private String id, password, name, addr;
-	
-	
 	public int getHak() {
 		return hak;
 	}
