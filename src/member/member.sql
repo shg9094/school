@@ -15,3 +15,4 @@ SET password = '2' , addr='도쿄'
 WHERE id = 'you';
 
 DELETE from MEMBER WHERE id = 'you';
+
