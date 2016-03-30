@@ -1,40 +1,42 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<div class="mg_auto"style="width:1000px">
-<form action="">
-	<fieldset>
-		<legend>회원관리</legend>
-		<table class = "table-condensed" style="width:90%;margin-left:50px">
-			<tr>
-				<td>전체회원 목록보기</td>
-				<td>
-					<jsp:include page="member_list.jsp"/>
-				</td>
-			</tr>
-			<tr>
-				<td>ID로 회원 검색하기</td>
-				<td>
-					<input type="text" id="searchById" name="searchById"/>
-				</td>
-			</tr>
-			<tr>
-				<td>이름으로 회원 검색(동명이인 허용)</td>
-				<td>
-					<input type="text" id="searchByName" name=="searchByName"/>
-				</td>
-			</tr>
-			<tr>
-				<td>학생 점수 입력</td>
-				<td>
-					<jsp:include page = "member_list.jsp"/>
-				</td>
-			</tr>
-			<tr>
-				<td colspan="2">
-					<button>전송</button>
-					<button>취소</button>
-				</td>
-			</tr>
-		</table>
-	</fieldset>
-</form>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<jsp:include page="adminHeader.jsp"/>
+<div class="container" style="width:1000px; margin:0 auto;">
+	<div class="row display-table">
+    <div class="col-xs-12 col-sm-4 display-cell" >
+	    <ul id="admin_sidebar" class="nav nav-pills nav-stacked">
+	    	<li ><a href="#" id="member_list">전체학생 목록보기</a></li>
+	    	<li ><a href="#" id="grade_list">전체성적 목록보기</a>	</li>
+	    	
+	    </ul>
+    </div>
+    <div class="col-xs-12 col-sm-8 display-cell" id="result" style="border: 1px solid black;height: 500px">
+       <%--  <jsp:include page="../member/member_list.jsp"/> --%>
+    </div>
+</div>
+</div>
+<script src="${context}/resources/js/admin.js"></script>	
+<script type="text/javascript">
+$(document).ready(function() {
+	$('#result').load('${context}/member/list.do');
+	$('#admin_sidebar').children().first().addClass('dropdown active');
+	$('#admin_sidebar').children().click(function() {
+		$(this).addClass('dropdown active');
+		$(this).siblings().removeClass('dropdown active');
+	});
+	$('#member_list').click(function() {
+		$('#result').empty();
+		$('#result').load('${context}/member/list.do');
+	});
+	$('#grade_list').click(function() {
+		$('#result').empty();
+		$('#result').load('${context}/grade/list.do');
+	});
+	$('grade_regist').click(function() {
+		$('#result').empty();
+		$('#result').load('${context}/grade/grade_add.do');
+	});
+});
+</script>
+
+
+

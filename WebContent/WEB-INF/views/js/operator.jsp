@@ -10,13 +10,14 @@
 	    	<li class="dropdown active"><a onclick="opr.grade()">성적계산기</a></li>
 	    	<li class="dropdown active"><a onclick="opr.gender()">성별 구분하기</a></li>
 	    	<li class="dropdown active"><a onclick="opr.gugudan()">구구단 출력하기</a></li>
+	    	<li class="dropdown active"><a onclick="liveScript()">라이브 스크립트 호출</a></li>
 	    </ul>
     </div>
     <div class="col-xs-12 col-sm-8 display-cell" id="result" style="border: 1px solid black;height: 500px">
         text
     </div>
-</div>
-</div>		
+	</div>
+	</div>		
 	<div>
 		<h3>
 			배열 출력하기
@@ -27,6 +28,9 @@
 	</div>
 </div>
 <script type="text/javascript">
+	function liveScript(){
+		alter('라이브스크립트 시절 (객체기반언어가 아닌 시절)은 이렇게')
+	}
 	var opr = {
 			sysout : function() {
 				var arr = ['사과','배','감','귤'];
