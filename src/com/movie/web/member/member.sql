@@ -1,4 +1,4 @@
-SELECT * from Member;
+SELECT * from admin;
 CREATE TABLE Member(
 	id VARCHAR2(30) PRIMARY KEY,
 	name VARCHAR2(30) NOT NULL,

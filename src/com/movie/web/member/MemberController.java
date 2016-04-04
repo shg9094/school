@@ -2,9 +2,7 @@ package com.movie.web.member;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -34,9 +32,7 @@ public class MemberController extends HttpServlet {
 		List<MemberBean> list = new ArrayList<MemberBean>();
 		String directory = str[0], action = str[1];
 		int result = 0;
-		System.out.println("@@MemberController@@");
-		System.out.println(directory + "@@directory@@");
-		System.out.println(action + "@@Action@@");
+		
 
 		command = CommandFactory.createCommand(directory, action);
 		switch (action) {

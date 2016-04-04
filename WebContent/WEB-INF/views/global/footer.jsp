@@ -3,9 +3,6 @@
 
 <footer>
 	<div class="mg_auto">
-
-
-
 		<div class="ABA-layout-align">
 			<div class="ABA-container-box-20-15">
 				<div class="ABA-content-box">
@@ -45,9 +42,6 @@
 	</div>
 	<div class="ABA-container-box-20-20">
 		<div class="ABA-content-box" style="height: 20px;"></div>
-
-
-
 	</div>
 </footer>
 </body>
